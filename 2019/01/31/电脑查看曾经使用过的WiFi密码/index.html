@@ -86,13 +86,13 @@
 <meta property="og:site_name" content="我不是酱饼">
 <meta property="og:description" content="title: 电脑查看曾经使用过的WiFi密码date: 2019-01-31 16:03:40 categories: WiFi安全 &amp;emsp;&amp;emsp;写作缘由：忘记了自家的WiFi密码，想查看电脑链接WiFi时，储存的WiFi信息，从而了解WiFi的密码。&amp;emsp;&amp;emsp;思路： 1.&amp;emsp;&amp;emsp; 使用netsh wlan命令，显示本机保存的profiles，配置文件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/path/wifi1.png">
-<meta property="og:image" content="http://yoursite.com/path/wifi2.png">
-<meta property="og:updated_time" content="2019-01-31T09:18:38.784Z">
+<meta property="og:image" content="http://yoursite.com/2019/01/31/电脑查看曾经使用过的WiFi密码/path/wifi1.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/31/电脑查看曾经使用过的WiFi密码/path/wifi2.png">
+<meta property="og:updated_time" content="2019-01-31T13:17:13.813Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我不是酱饼">
 <meta name="twitter:description" content="title: 电脑查看曾经使用过的WiFi密码date: 2019-01-31 16:03:40 categories: WiFi安全 &amp;emsp;&amp;emsp;写作缘由：忘记了自家的WiFi密码，想查看电脑链接WiFi时，储存的WiFi信息，从而了解WiFi的密码。&amp;emsp;&amp;emsp;思路： 1.&amp;emsp;&amp;emsp; 使用netsh wlan命令，显示本机保存的profiles，配置文件">
-<meta name="twitter:image" content="http://yoursite.com/path/wifi1.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/31/电脑查看曾经使用过的WiFi密码/path/wifi1.png">
 
 
 
@@ -315,7 +315,8 @@
         <hr>
 <p>title: 电脑查看曾经使用过的WiFi密码<br>date: 2019-01-31 16:03:40</p>
 <h2 id="categories-WiFi安全"><a href="#categories-WiFi安全" class="headerlink" title="categories: WiFi安全"></a>categories: WiFi安全</h2><p><br></p>
-<p>&emsp;&emsp;<strong>写作缘由：</strong>忘记了自家的WiFi密码，想查看电脑链接WiFi时，储存的WiFi信息，从而了解WiFi的密码。</p><br><p>&emsp;&emsp;<strong>思路：</strong></p><br><p> 1.&emsp;&emsp; 使用netsh wlan命令，显示本机保存的profiles，配置文件是以WiFi的SSID命名的，里面存放着所有的电脑链接过的WiFi的信息。</p><br><p>在命令提示符页面中，输入“<code>netsh wlan show profiles</code>”信息，即可查看到系统中所储存的所有无线网络的SSID信息。</p><br><img src="/path/wifi1.png" alt="details"><br><p>2. &emsp;&emsp;输入下列命令，“<code>netsh wlan show profile name=”连接名” key=clear</code>”，请记得将连接名改为自己想要查询的无线网络的SSID名称。</p><br><p>以无线网络的SSID名称aa1111为例：</p><br><img src="/path/wifi2.png" alt="SSID_details"><br><p>关键内容即为该无线网络所包含的密码信息。</p>
+<p>&emsp;&emsp;<strong>写作缘由：</strong>忘记了自家的WiFi密码，想查看电脑链接WiFi时，储存的WiFi信息，从而了解WiFi的密码。</p><br><p>&emsp;&emsp;<strong>思路：</strong></p><br><p> 1.&emsp;&emsp; 使用netsh wlan命令，显示本机保存的profiles，配置文件是以WiFi的SSID命名的，里面存放着所有的电脑链接过的WiFi的信息。</p><br><p>在命令提示符页面中，输入“<code>netsh wlan show profiles</code>”信息，即可查看到系统中所储存的所有无线网络的SSID信息。</p><br><img src="path/wifi1.png" alt="details"><br><p>2. &emsp;&emsp;输入下列命令，“<code>netsh wlan show profile name=”连接名” key=clear</code>”，请记得将连接名改为自己想要查询的无线网络的SSID名称。</p><br><p>以无线网络的SSID名称aa1111为例：</p><br><img src="path/wifi2.png" alt="SSID_details"><br><p>关键内容即为该无线网络所包含的密码信息。</p>
+
 
 
       
