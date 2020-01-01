@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="我不是酱饼">
 <meta property="og:description" content="&amp;emsp;&amp;emsp;写作缘由：朋友求助帮忙爬取一下大众点评天河商圈的商户名, 店铺收藏量, 评论数量, 好评数, 差评数, 口味评分, 环境评分,服务评分, 人均价格, 首页优质评论数。 &amp;emsp;&amp;emsp;思路：  &amp;emsp;&amp;emsp;1.&amp;emsp;我们发现大众点评是需要我们模拟浏览器向服务器发起请求，比如我们设置了头信息中的Cookie等头信息，这样服务器就会以为我们是通过浏览">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-01T06:13:15.583Z">
+<meta property="og:updated_time" content="2020-01-01T06:28:31.455Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python爬虫之通过pyquery爬取大众点评评论信息">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp;写作缘由：朋友求助帮忙爬取一下大众点评天河商圈的商户名, 店铺收藏量, 评论数量, 好评数, 差评数, 口味评分, 环境评分,服务评分, 人均价格, 首页优质评论数。 &amp;emsp;&amp;emsp;思路：  &amp;emsp;&amp;emsp;1.&amp;emsp;我们发现大众点评是需要我们模拟浏览器向服务器发起请求，比如我们设置了头信息中的Cookie等头信息，这样服务器就会以为我们是通过浏览">
@@ -367,9 +367,9 @@
     </code>
 </pre>
 <div>&emsp;&emsp;2. &emsp;根据天河商圈的URL：http://www.dianping.com/guangzhou/ch10/r22p%s，我们发现，天河商圈大概有50个页面，我们只需要遍历50次，修改URL中末尾处的%s从1到51即可。</div>
-![details_1](http://1253474430.vod2.myqcloud.com/9d2f8d63vodcq1253474430/df4b85b75285890797289152407/Wi8y1NUYYkcA.jpg)
+![detailsa](http://1253474430.vod2.myqcloud.com/9d2f8d63vodcq1253474430/df4b85b75285890797289152407/Wi8y1NUYYkcA.jpg)
 <div>&emsp;&emsp;3. &emsp;根据页面显示的源代码，我们可以根据css的定位获取到每个页面的中每个商铺的ID，根据ID，我们可以利用URL：http://www.dianping.com/shop/%s/review_all，修改URL中%s为商户的ID。</div>
-![details_2](http://1253474430.vod2.myqcloud.com/9d2f8d63vodcq1253474430/26f24d985285890797290834850/csmRO2JhokUA.jpg)
+![detailsb](http://1253474430.vod2.myqcloud.com/9d2f8d63vodcq1253474430/26f24d985285890797290834850/csmRO2JhokUA.jpg)
 即：
 <pre>
     <code>
@@ -381,9 +381,9 @@
     </code>
 </pre>
 <div>&emsp;&emsp;4. &emsp;根据单个商铺的页面显示的源代码，我们可以根据css的定位获取到商户名，评论数量，好评数, 差评数, 星级, 口味评分, 环境评分,服务评分, 人均价格以及所有评论信息。我们发现解析的数据比如：好评数：(1250)，这里面包含了一些与之无关的字符，我们可以通过正则表达式将数字部分匹配出来。</div>
-![details_3](http://1253474430.vod2.myqcloud.com/9d2f8d63vodcq1253474430/761d82405285890797291914876/ZBJNRHMQVS4A.jpg)
-![details_4](http://1253474430.vod2.myqcloud.com/9d2f8d63vodcq1253474430/761dec305285890797291915040/642FfemaynIA.jpg)
-![details_5](http://1253474430.vod2.myqcloud.com/9d2f8d63vodcq1253474430/73dd2b3d5285890797291829733/JCdSakI3ATMA.jpg)
+![detailsc](http://1253474430.vod2.myqcloud.com/9d2f8d63vodcq1253474430/761d82405285890797291914876/ZBJNRHMQVS4A.jpg)
+![detailsd](http://1253474430.vod2.myqcloud.com/9d2f8d63vodcq1253474430/761dec305285890797291915040/642FfemaynIA.jpg)
+![detailse](http://1253474430.vod2.myqcloud.com/9d2f8d63vodcq1253474430/73dd2b3d5285890797291829733/JCdSakI3ATMA.jpg)
 即：
 <pre>
     <code>
