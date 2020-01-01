@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻">
+<meta name="description" content="&amp;emsp;&amp;emsp;写作缘由：朋友求助帮忙爬取一下大众点评天河商圈的商户名, 店铺收藏量, 评论数量, 好评数, 差评数, 口味评分, 环境评分,服务评分, 人均价格, 首页优质评论数。 &amp;emsp;&amp;emsp;思路：  &amp;emsp;&amp;emsp;1.&amp;emsp;我们发现大众点评是需要我们模拟浏览器向服务器发起请求，比如我们设置了头信息中的Cookie等头信息，这样服务器就会以为我们是通过浏览">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python爬虫1">
-<meta property="og:url" content="http://yoursite.com/2019/01/04/test-my-site/index.html">
+<meta property="og:title" content="python爬虫之通过pyquery爬取大众点评评论信息">
+<meta property="og:url" content="http://yoursite.com/2019/01/04/python爬虫之通过pyquery爬取大众点评/index.html">
 <meta property="og:site_name" content="我不是酱饼">
-<meta property="og:description" content="嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;写作缘由：朋友求助帮忙爬取一下大众点评天河商圈的商户名, 店铺收藏量, 评论数量, 好评数, 差评数, 口味评分, 环境评分,服务评分, 人均价格, 首页优质评论数。 &amp;emsp;&amp;emsp;思路：  &amp;emsp;&amp;emsp;1.&amp;emsp;我们发现大众点评是需要我们模拟浏览器向服务器发起请求，比如我们设置了头信息中的Cookie等头信息，这样服务器就会以为我们是通过浏览">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-04T16:21:35.431Z">
+<meta property="og:updated_time" content="2020-01-01T06:13:15.583Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python爬虫1">
-<meta name="twitter:description" content="嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻">
+<meta name="twitter:title" content="python爬虫之通过pyquery爬取大众点评评论信息">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;写作缘由：朋友求助帮忙爬取一下大众点评天河商圈的商户名, 店铺收藏量, 评论数量, 好评数, 差评数, 口味评分, 环境评分,服务评分, 人均价格, 首页优质评论数。 &amp;emsp;&amp;emsp;思路：  &amp;emsp;&amp;emsp;1.&amp;emsp;我们发现大众点评是需要我们模拟浏览器向服务器发起请求，比如我们设置了头信息中的Cookie等头信息，这样服务器就会以为我们是通过浏览">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/04/test-my-site/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/04/python爬虫之通过pyquery爬取大众点评/">
 
 
 
 
 
-  <title>python爬虫1 | 我不是酱饼</title>
+  <title>python爬虫之通过pyquery爬取大众点评评论信息 | 我不是酱饼</title>
   
 
 
@@ -242,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/04/test-my-site/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/04/python爬虫之通过pyquery爬取大众点评/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="酱饼">
@@ -259,7 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python爬虫1</h1>
+          <h1 class="post-title" itemprop="name headline">python爬虫之通过pyquery爬取大众点评评论信息</h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/01/04/test-my-site/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/04/test-my-site/" itemprop="commentCount"></span>
+                <a href="/2019/01/04/python爬虫之通过pyquery爬取大众点评/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/04/python爬虫之通过pyquery爬取大众点评/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -321,7 +321,7 @@
 
           
           
-             <span id="/2019/01/04/test-my-site/" class="leancloud_visitors" data-flag-title="python爬虫1">
+             <span id="/2019/01/04/python爬虫之通过pyquery爬取大众点评/" class="leancloud_visitors" data-flag-title="python爬虫之通过pyquery爬取大众点评评论信息">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -352,7 +352,94 @@
       
 
       
-        <h1 id="嘻嘻嘻"><a href="#嘻嘻嘻" class="headerlink" title="嘻嘻嘻"></a>嘻嘻嘻</h1><p>嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻<br>嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻<br>嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻<br>嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻<br>嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻 </p>
+        <p><br></p>
+<p></p><p>&emsp;&emsp;<strong>写作缘由：</strong>朋友求助帮忙爬取一下大众点评天河商圈的商户名, 店铺收藏量, 评论数量, 好评数, 差评数, 口味评分, 环境评分,服务评分, 人均价格, 首页优质评论数。</p><p></p>
+<p><div>&emsp;&emsp;<strong>思路：</strong></div></p>
+<p><div> &emsp;&emsp;1.&emsp;我们发现大众点评是需要我们模拟浏览器向服务器发起请求，比如我们设置了头信息中的Cookie等头信息，这样服务器就会以为我们是通过浏览器登录账户进行访问的，不会把我们列入机器人爬虫，所以需要headers请求头。</div></p>
+<pre>
+    <code>
+        headers = {
+            'Host': 'www.dianping.com',
+            'User-Agent':"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36",
+            'Accept-Encoding': 'gzip',
+            'Cookie' : 'xxxxxx'#xxxxxx为电脑中自己登陆时的cookie值
+        }
+    </code>
+</pre>
+<div>&emsp;&emsp;2. &emsp;根据天河商圈的URL：http://www.dianping.com/guangzhou/ch10/r22p%s，我们发现，天河商圈大概有50个页面，我们只需要遍历50次，修改URL中末尾处的%s从1到51即可。</div>
+![details_1](http://1253474430.vod2.myqcloud.com/9d2f8d63vodcq1253474430/df4b85b75285890797289152407/Wi8y1NUYYkcA.jpg)
+<div>&emsp;&emsp;3. &emsp;根据页面显示的源代码，我们可以根据css的定位获取到每个页面的中每个商铺的ID，根据ID，我们可以利用URL：http://www.dianping.com/shop/%s/review_all，修改URL中%s为商户的ID。</div>
+![details_2](http://1253474430.vod2.myqcloud.com/9d2f8d63vodcq1253474430/26f24d985285890797290834850/csmRO2JhokUA.jpg)
+即：
+<pre>
+    <code>
+        # 解析id
+        shangId1 = doc("div.content > div.shop-list.J_shop-list.shop-all-list > ul > li").items()
+        for data in shangId1:
+            shopId = data("div.txt >div.tit > a").attr("data-shopid")
+            listShop.append(shopId)
+    </code>
+</pre>
+<div>&emsp;&emsp;4. &emsp;根据单个商铺的页面显示的源代码，我们可以根据css的定位获取到商户名，评论数量，好评数, 差评数, 星级, 口味评分, 环境评分,服务评分, 人均价格以及所有评论信息。我们发现解析的数据比如：好评数：(1250)，这里面包含了一些与之无关的字符，我们可以通过正则表达式将数字部分匹配出来。</div>
+![details_3](http://1253474430.vod2.myqcloud.com/9d2f8d63vodcq1253474430/761d82405285890797291914876/ZBJNRHMQVS4A.jpg)
+![details_4](http://1253474430.vod2.myqcloud.com/9d2f8d63vodcq1253474430/761dec305285890797291915040/642FfemaynIA.jpg)
+![details_5](http://1253474430.vod2.myqcloud.com/9d2f8d63vodcq1253474430/73dd2b3d5285890797291829733/JCdSakI3ATMA.jpg)
+即：
+<pre>
+    <code>
+        # 商户名
+        shopName = doc1("div.review-list-header > h1 > a").text()
+        print("商户名：" + shopName)
+        # 评论数量
+        #re.sub("\D", "", reviewsSum)：正则表达式将获取到的数据reviewsSum将匹配数字部分提取出来
+        reviewsSum = doc1("div.rank-info > span.reviews").text()
+        reviewsSum = re.sub("\D", "", reviewsSum)
+        print("评论数量：" + reviewsSum)
+        # 好评数
+        goodSum = doc1("div.filters > label.filter-item.filter-good > span.count").text()
+        goodSum = re.sub("\D", "", goodSum)
+        print("好评数：" + goodSum)
+        # 差评数
+        badSum = doc1("div.filters > label.filter-item.filter-bad > span.count").text()
+        badSum = re.sub("\D", "", badSum)
+        print("差评数：" + badSum)
+        # 口味评分
+        kwSum = doc1("div.rank-info > span.score :first-child").text()
+        print("口味评分：" + kwSum[3:])
+        # 环境评分
+        hjSum = doc1("div.rank-info > span.score :nth-child(2)").text()
+        print("环境评分：" + hjSum[3:])
+        # 服务评分
+        fwSum = doc1("div.rank-info > span.score :last-child").text()
+        print("服务评分：" + fwSum[3:])
+        # 人均价格
+        priceSum = doc1("div.rank-info > span.price").text()
+        priceSum = re.sub("\D", "", priceSum)
+        print("人均价格：" + priceSum)
+    </code>
+</pre>
+<div>&emsp;&emsp;5. &emsp;根据规则：3张图片+150个文字以上算优质评论，我们解析了评论，用了上述的定位方法，并且我们发现解析的评论中带有"收起评论"、" "、"\n"，我们通通将其转换成""，再计算评论的长度。</div>
+即：
+<pre>
+    <code>
+        # 解析评论
+        pinglunLi = doc1("div.reviews-items > ul > li").items()
+        for data in pinglunLi:
+        # 首页每个评论长度
+        pinglunShop = len(data("div > div.review-words").text().replace("收起评论", "").replace(" ", "").replace("\n", ""))
+        print("首页每个评论长度" + str(pinglunShop))
+        # 首页每个图片个数
+        imgShop = data("div > div.review-pictures > ul > li> a").items()
+        imgList = 0
+        for key in imgShop:
+            imgList = imgList + 1
+        print("首页每个图片个数" + str(imgList))
+        # 3张图片+150个文字以上算优质评论
+        if pinglunShop >= 150 and imgList > 3:
+            goodReviews = goodReviews + 1
+    </code>
+</pre>
+
 
 
 
@@ -378,10 +465,6 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/01/04/python爬虫2/" rel="next" title="python爬虫2">
-                <i class="fa fa-chevron-left"></i> python爬虫2
-              </a>
             
           </div>
 
@@ -446,17 +529,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -473,7 +547,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -528,22 +602,6 @@
       </section>
 
       
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#嘻嘻嘻"><span class="nav-number">1.</span> <span class="nav-text">嘻嘻嘻</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
 
       
      
@@ -558,7 +616,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
