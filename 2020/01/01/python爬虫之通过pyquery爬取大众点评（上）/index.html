@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="title: python爬虫之通过pyquery爬取大众点评（上）date: 2020-01-01 22:29:00 categories: python爬虫 &amp;emsp;&amp;emsp;写作缘由：朋友求助帮忙爬取一下大众点评天河商圈的商户名, 店铺收藏量, 评论数量,好评数, 差评数, 口味评分, 环境评分,服务评分, 人均价格, 首页优质评论数。 &amp;emsp;&amp;emsp;思路：  &amp;emsp;">
+<meta name="description" content="title: python爬虫之通过pyquery爬取大众点评（上）date: 2020-01-01 22:29:00 categories: python爬虫">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我不是酱饼">
 <meta property="og:url" content="http://yoursite.com/2020/01/01/python爬虫之通过pyquery爬取大众点评（上）/index.html">
 <meta property="og:site_name" content="我不是酱饼">
-<meta property="og:description" content="title: python爬虫之通过pyquery爬取大众点评（上）date: 2020-01-01 22:29:00 categories: python爬虫 &amp;emsp;&amp;emsp;写作缘由：朋友求助帮忙爬取一下大众点评天河商圈的商户名, 店铺收藏量, 评论数量,好评数, 差评数, 口味评分, 环境评分,服务评分, 人均价格, 首页优质评论数。 &amp;emsp;&amp;emsp;思路：  &amp;emsp;">
+<meta property="og:description" content="title: python爬虫之通过pyquery爬取大众点评（上）date: 2020-01-01 22:29:00 categories: python爬虫">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-01T15:57:29.582Z">
+<meta property="og:updated_time" content="2020-01-02T10:40:36.784Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我不是酱饼">
-<meta name="twitter:description" content="title: python爬虫之通过pyquery爬取大众点评（上）date: 2020-01-01 22:29:00 categories: python爬虫 &amp;emsp;&amp;emsp;写作缘由：朋友求助帮忙爬取一下大众点评天河商圈的商户名, 店铺收藏量, 评论数量,好评数, 差评数, 口味评分, 环境评分,服务评分, 人均价格, 首页优质评论数。 &amp;emsp;&amp;emsp;思路：  &amp;emsp;">
+<meta name="twitter:description" content="title: python爬虫之通过pyquery爬取大众点评（上）date: 2020-01-01 22:29:00 categories: python爬虫">
 
 
 
@@ -332,49 +332,7 @@
       
         <hr>
 <p>title: python爬虫之通过pyquery爬取大众点评（上）<br>date: 2020-01-01 22:29:00</p>
-<h2 id="categories-python爬虫"><a href="#categories-python爬虫" class="headerlink" title="categories: python爬虫"></a>categories: python爬虫</h2><p><br></p>
-<p></p><p>&emsp;&emsp;<strong>写作缘由：</strong>朋友求助帮忙爬取一下大众点评天河商圈的商户名, 店铺收藏量, 评论数量,<br>好评数, 差评数, 口味评分, 环境评分,服务评分, 人均价格, 首页优质评论数。</p><p></p>
-<p><div>&emsp;&emsp;<strong>思路：</strong></div></p>
-<p><div> &emsp;&emsp;1.&emsp;我们发现大众点评是需要我们模拟浏览器向服务器发起请求，比如我们设置了头信息中的Cookie等头信息，<br>这样服务器就会以为我们是通过浏览器登录账户进行访问的，不会把我们列入机器人爬虫，所以需要headers请求头。</div></p>
-<pre>
-    <code>
-        headers = {
-            'Host': 'www.dianping.com',
-            'User-Agent':"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Mobile Safari/537.36",
-            'Accept-Encoding': 'gzip',
-            'Cookie' : 'xxxxxx'#xxxxxx为电脑中自己登陆时的cookie值
-        }
-    </code>
-</pre>
-<div>&emsp;&emsp;2. &emsp;根据天河商圈的URL：http://www.dianping.com/guangzhou/ch10/r22p%s，
-我们发现，天河商圈大概有50个页面，我们只需要遍历50次，修改URL中末尾处的%s从1到51即可。</div>
-![detailsa](http://1253474430.vod2.myqcloud.com/9d2f8d63vodcq1253474430/df4b85b75285890797289152407/Wi8y1NUYYkcA.jpg)
-<div>&emsp;&emsp;3. &emsp;根据页面显示的源代码，我们可以根据css的定位获取到每个页面的中每个商铺的ID，
-根据ID，我们可以利用URL：http://www.dianping.com/shop/%s/review_all，修改URL中%s为商户的ID。</div>
-![detailsb](http://1253474430.vod2.myqcloud.com/9d2f8d63vodcq1253474430/26f24d985285890797290834850/csmRO2JhokUA.jpg)
-即：
-<pre>
-    <code>
-        # 解析id
-        shangId1 = doc("div.content > div.shop-list.J_shop-list.shop-all-list > ul > li").items()
-        for data in shangId1:
-            shopId = data("div.txt >div.tit > a").attr("data-shopid")
-            listShop.append(shopId)
-    </code>
-</pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
+<h2 id="categories-python爬虫"><a href="#categories-python爬虫" class="headerlink" title="categories: python爬虫"></a>categories: python爬虫</h2>
       
     </div>
     
@@ -407,10 +365,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/01/02/python爬虫之通过pyquery爬取大众点评（下）/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
